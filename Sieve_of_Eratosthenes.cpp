@@ -11,7 +11,7 @@ int countPrimes(int n) {
         if(!v[i]) continue;
         curr = 2*i + 1;
         count++;
-        if(curr > sqrt(n)) continue;
+        if(curr > sqrt(n)) break;
         for(int j=curr*curr; j<n; j += curr){
             if(j&1){
                 index = (j-1)/2;
